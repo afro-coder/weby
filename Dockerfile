@@ -3,7 +3,12 @@ MAINTAINER Webmaster Team "web@cercomp.ufg.br"
 
 RUN apt-get update
 # Added nodejs to fix  rake assets:compile Could not find a JavaScript runtime
-RUN apt-get install -y git imagemagick libpq-dev libncurses5-dev libffi-dev curl build-essential libssl-dev libreadline6-dev zlib1g-dev zlib1g libsqlite3-dev libmagickwand-dev libqtwebkit-dev libqt4-dev libreadline-dev libxslt-dev nodejs
+# Added yarn to fix The git source is not yet checked out
+RUN apt-get install -y git imagemagick libpq-dev libncurses5-dev libffi-dev \
+ curl build-essential libssl-dev libreadline6-dev \
+ zlib1g-dev zlib1g libsqlite3-dev libmagickwand-dev libqtwebkit-dev \
+libqt4-dev libreadline-dev libxslt-dev
+#nodejs yarn
 
 COPY . /weby
 WORKDIR /weby
@@ -12,6 +17,6 @@ RUN bundle install
 
 ENV RAILS_ENV=development
 RUN bundle exec rake assets:precompile --trace RAILS_ENV=development
-#CMD export SECRET_KEY_BASE=`bundle exec rake secret`
+CMD export SECRET_KEY_BASE=`bundle exec rake secret`
 CMD rails s -b 0.0.0.0 -p 3000
 # docker run -it -p $PORT:$PORT -e SECRET_KEY_BASE=$SECRET_KEY_BASE -e PG_DB=$PG_DB -e PG_USER=$PG_USER -e PG_PASS=$PG_PASS -e PG_HOST=$PG_HOST -e PG_PORT=$PG_PORT -e PORT=$PORT faraohh/weby:latest

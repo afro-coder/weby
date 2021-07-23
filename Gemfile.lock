@@ -127,7 +127,7 @@ GEM
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.1.1)
       aws-eventstream (~> 1.0, >= 1.0.2)
-    bcrypt (3.1.13)
+    bcrypt (3.1.16)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -165,7 +165,7 @@ GEM
       railties (>= 3.1.0)
     daemons (1.3.1)
     debug_inspector (0.0.3)
-    devise (4.7.1)
+    devise (4.8.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -351,7 +351,7 @@ GEM
       ffi (~> 1.0)
     ref (2.0.0)
     regexp_parser (1.7.0)
-    responders (3.0.0)
+    responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
     rollbar (2.24.0)
@@ -428,8 +428,8 @@ GEM
       unf_ext
     unf_ext (0.0.7.6)
     uniform_notifier (1.13.0)
-    warden (1.2.8)
-      rack (>= 2.0.6)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -458,7 +458,7 @@ DEPENDENCIES
   capybara
   clipboard-rails (~> 1.7.1)
   cropper-rails (~> 2.3.2.1)
-  devise (~> 4.7.1)
+  devise (~> 4.8)
   dotenv-rails (~> 2.7.5)
   factory_girl_rails (~> 4.4.1)
   feedback!
@@ -477,6 +477,7 @@ DEPENDENCIES
   non-stupid-digest-assets
   nori
   oj
+  omniauth (>= 1.0.0)
   omniauth-shibboleth
   paperclip!
   pg (~> 1.2.3)
@@ -509,4 +510,4 @@ RUBY VERSION
    ruby 2.5.7p206
 
 BUNDLED WITH
-   1.16.3
+   1.17.3

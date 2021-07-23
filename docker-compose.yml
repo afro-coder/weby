@@ -17,6 +17,9 @@ services:
       PG_PASS: postgres
       PG_HOST: webydb
       SECRET_KEY_BASE: d42f89e05bca1a10b56952a91911aef765832ae23cb10c9af6729e3ddd3bed56cfadadd50353278890343719bfa3bbc319920573d3a3f812c32bd5b0d3fc6702
+    entrypoint: [./entrypoint]
+    command: rails server -p 3000 -b '0.0.0.0'
+
 
   webydb:
     image: docker.io/postgres
