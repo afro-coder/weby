@@ -26,7 +26,9 @@ gem 'asset_sync'
 gem 'searchkick', '~> 4.3.0'
 gem 'oj' #boost json parsing
 
-# Ominiauth
+# Ominiauth 
+# Was getting this error You are using an old OmniAuth version, please ensure you have 1.0.0.pr2
+gem 'omniauth' ,'>= 1.0.0'
 gem 'omniauth-shibboleth'
 
 # assets
@@ -37,7 +39,8 @@ gem 'non-stupid-digest-assets' # Generate assets without digest.
 
 gem 'simple_form', '~> 5.0.2'
 gem 'rails-observers', '~> 0.1.5'
-gem 'devise', '~> 4.7.1'
+#https://github.com/heartcombo/devise/commit/1d138dd40cdc291a427b89027d16a869818a5c19#commitcomment-50168476
+gem 'devise', '~> 4.8'
 gem 'kaminari', '~> 1.2.0'
 gem 'paperclip', :git => 'http://github.com/leo-souza/paperclip.git'
 gem 'acts-as-taggable-on', '~> 6.5.0'
